@@ -12,6 +12,8 @@ left, top, right, bottom = 350, 450, 1600, 500 #TypeMonkey
 pixelMulti = 23 #TypeRacer
 pixelMulti = 40 #TypeMonkey
 delay = 0
+timer = 30
+
 imageArr = []
 
 def captureScreen(left, top, right, bottom):
@@ -52,7 +54,7 @@ if __name__ == "__main__":
     iter = 0
     start = 0
 
-    while (time.time() - stopper) < 30:
+    while (time.time() - stopper) < timer:
         text = convertLinesToText(start, 3)
         pyautogui.typewrite(text, delay)
 
@@ -62,9 +64,3 @@ if __name__ == "__main__":
 
         if (delay == 0):
             time.sleep(0.25)
-
-
-
-
-
-
